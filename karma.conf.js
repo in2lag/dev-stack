@@ -19,7 +19,7 @@ module.exports = function (config) {
         // list of files to exclude
         exclude: [],
 
-        // preprocess matching files before serving them to the browser
+        // pre-process matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
             'app/tests/**/*-test.js': ['webpack'], //tests
@@ -30,6 +30,10 @@ module.exports = function (config) {
             // karma watches the test entry points
             // (you don't need to specify the entry option)
             // webpack watches dependencies
+            resolve: {
+                extensions: ['',  '.webpack.js', '.web.js', '.js', '.jsx', '.scss']
+            },
+
             module: {
                 loaders: [
                     {
@@ -79,7 +83,7 @@ module.exports = function (config) {
         singleRun: false,
 
         // Concurrency level
-        // how many browser should be started simultanous
+        // how many browser should be started simultaneous
         concurrency: Infinity
     })
 };

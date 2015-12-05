@@ -1,4 +1,4 @@
-import TestComponent from './components/test-component';
+import React from 'react';
+import HelloReact from './components/hello-react';
 
-var test = new TestComponent();
-test.print();
+React.render(<HelloReact name="ReactJS!"/>, document.getElementById('hello-react'));
