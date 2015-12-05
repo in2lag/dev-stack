@@ -7,5 +7,8 @@
     "test": "tbd"
   },
   "author": "Petr Prchal <petr@prchal.eu>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.12.9"
+  }
 }
