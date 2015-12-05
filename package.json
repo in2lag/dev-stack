@@ -1,0 +1,11 @@
+{
+  "name": "dev-stack",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "tbd"
+  },
+  "author": "Petr Prchal <petr@prchal.eu>",
+  "license": "ISC"
+}
