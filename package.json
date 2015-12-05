@@ -5,8 +5,10 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server -d",
-    "test": "tbd"
+    "test": "tbd",
+    "dist": "webpack -p"
   },
+
   "author": "Petr Prchal <petr@prchal.eu>",
   "license": "ISC",
   "devDependencies": {
