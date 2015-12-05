@@ -1,8 +1,8 @@
 import './../scss/test-component.scss';
 
 export default class {
-    constructor() {
-        this.message = 'component works';
+    constructor(message) {
+        this.message = message || 'component works';
     }
 
     print() {

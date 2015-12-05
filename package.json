@@ -4,9 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server -d",
-    "test": "tbd",
-    "dist": "webpack -p"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js -d",
+    "test": "./node_modules/karma/bin/karma start",
+    "dist": "node ./node_modules/webpack/bin/webpack.js -p"
   },
   "author": "Petr Prchal <petr@prchal.eu>",
   "license": "ISC",
@@ -18,9 +18,16 @@
     "css-loader": "^0.23.0",
     "extract-text-webpack-plugin": "^0.9.1",
     "html-webpack-plugin": "^1.7.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-webpack": "^1.7.0",
     "node-sass": "^3.4.2",
+    "phantomjs": "^1.9.19",
+    "phantomjs-polyfill": "0.0.1",
     "sass-loader": "^3.1.2",
-    "scss-loader": "0.0.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
