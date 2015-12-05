@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server -d",
     "test": "tbd"
   },
   "author": "Petr Prchal <petr@prchal.eu>",
