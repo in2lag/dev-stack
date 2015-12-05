@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
+    "start": "webpack-dev-server",
     "test": "tbd"
   },
   "author": "Petr Prchal <petr@prchal.eu>",
@@ -12,6 +13,8 @@
     "babel-core": "^6.3.13",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.3.13",
-    "webpack": "^1.12.9"
+    "html-webpack-plugin": "^1.7.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   }
 }

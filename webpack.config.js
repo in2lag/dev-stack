@@ -1,17 +1,27 @@
 /* global __dirname */
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var htmlWebpackConfig = {
+    template: __dirname + '/app/index.html',
+    inject: 'body'
+};
+
 module.exports = {
     context: __dirname + "/app",
-    entry: "./app.js",
+    entry: {
+        javascript: "./js/app.js"
+    },
 
     output: {
-        filename: "bundle.js",
-        path: __dirname + "/dist/"
+        path: __dirname + "/dist/",
+        filename: "js/app.js"
     },
+
+    plugins: [new HtmlWebpackPlugin(htmlWebpackConfig)],
 
     module: {
         loaders: [
             {
-                test: /\.jsx?/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
                 loaders: ["babel"]
             }

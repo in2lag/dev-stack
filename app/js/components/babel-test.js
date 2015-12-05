@@ -1,4 +1,4 @@
-class BabelWorks {
+export default class {
     constructor() {
         this.message = 'babel works';
     }
@@ -7,6 +7,3 @@ class BabelWorks {
         console.log(this.message);
     }
 }
-
-var babel = new BabelWorks();
-babel.print();
