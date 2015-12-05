@@ -7,19 +7,21 @@ var htmlWebpackConfig = {
 
 module.exports = {
     context: __dirname + "/app",
-    entry: {
-        javascript: "./js/app.js"
-    },
+    entry: "./app.js",
 
     output: {
         path: __dirname + "/dist/",
-        filename: "js/app.js"
+        filename: "app.js"
     },
 
     plugins: [new HtmlWebpackPlugin(htmlWebpackConfig)],
 
     module: {
         loaders: [
+            {
+                test: /\.scss$/,
+                loaders: ["style", "css", "autoprefixer", "sass"]
+            },
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,

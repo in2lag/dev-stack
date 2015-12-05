@@ -1,6 +1,8 @@
+import './../scss/test-component.scss';
+
 export default class {
     constructor() {
-        this.message = 'babel works';
+        this.message = 'component works';
     }
 
     print() {
