@@ -1,5 +1,7 @@
 /* global __dirname */
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 var htmlWebpackConfig = {
     template: __dirname + '/app/index.html',
     inject: 'body'
@@ -14,13 +16,16 @@ module.exports = {
         filename: "app.js"
     },
 
-    plugins: [new HtmlWebpackPlugin(htmlWebpackConfig)],
+    plugins: [
+        new HtmlPlugin(htmlWebpackConfig),
+        new ExtractTextPlugin("styles.css")
+    ],
 
     module: {
         loaders: [
             {
                 test: /\.scss$/,
-                loaders: ["style", "css", "autoprefixer", "sass"]
+                loader: ExtractTextPlugin.extract("style", ["css", "autoprefixer", "sass"])
             },
             {
                 test: /\.jsx?$/,
