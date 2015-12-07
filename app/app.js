@@ -1,4 +1,16 @@
 import React from 'react';
-import HelloReact from './components/hello-react';
+import { render } from 'react-dom'
+import createBrowserHistory from 'history/lib/createBrowserHistory'
+import { Router, Route, Link } from 'react-router'
+import Welcome from './components/welcome';
+import About from './components/about';
+import TeamMembers from './components/team-members';
 
-React.render(<HelloReact name="ReactJS!"/>, document.getElementById('hello-react'));
+render((
+    <Router history={createBrowserHistory()}>
+        <Route path="/" component={Welcome}>
+            <Route path="about" component={About}/>
+            <Route path="team-members" component={TeamMembers}/>
+        </Route>
+    </Router>
+), document.getElementById('hello-react'))
