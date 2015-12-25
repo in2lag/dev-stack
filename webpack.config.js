@@ -1,4 +1,5 @@
 /* global __dirname */
+/* global require */
 var HtmlPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack');
@@ -6,7 +7,7 @@ var webpack = require('webpack');
 var htmlWebpackConfig = {
     template: __dirname + '/app/index.html',
     inject: 'body'
-};
+}
 
 var config = {
     context: __dirname + "/app",
@@ -39,7 +40,7 @@ var config = {
             }
         ]
     }
-};
+}
 
 //Production build
 if (process.env.NODE_ENV === 'production') {

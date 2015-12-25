@@ -1,6 +1,6 @@
-import Welcome from './components/welcome';
-import HelloReact from './components/hello-react';
-import App from './components/app';
+import Welcome from './components/welcome'
+import HelloReact from './components/hello-react'
+import App from './components/app'
 
 const routes = {
     path: '/',
@@ -9,6 +9,6 @@ const routes = {
     childRoutes: [
         { path: 'hello-react/:name', component: HelloReact }
     ]
-};
+}
 
-export default routes;
+export default routes
