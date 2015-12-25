@@ -10,11 +10,11 @@ var htmlWebpackConfig = {
 
 var config = {
     context: __dirname + "/app",
-    entry: "./app.js",
+    entry: "./main.js",
 
     output: {
         path: __dirname + "/dist/",
-        filename: "app.js"
+        filename: "main.js"
     },
 
     plugins: [
